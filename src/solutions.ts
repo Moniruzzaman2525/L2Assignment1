@@ -49,3 +49,29 @@ const user = {
 
 const problemFour = getProperty(user, "name");
 console.log(problemFour)
+
+
+// Problem Five
+
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+}
+
+function toggleReadStatus(book: Book) {
+  return {
+    ...book,
+    isRead: true,
+  };
+}
+
+const myBook = {
+  title: "TypeScript Guide",
+  author: "Jane Doe",
+  publishedYear: 2024,
+};
+
+const problemFive =  toggleReadStatus(myBook);
+console.log(problemFive)
+
